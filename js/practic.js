@@ -173,3 +173,32 @@ function fourthTask4() {
   }
   console.log(result);
 }
+
+function sayHello(name) {
+  //* Создайте функцию, которая будет на вход принимать 1 аргумент с именем человека и возвращать строку.
+  return `Привет, ${name}!`;
+}
+
+console.log(sayHello('Анзор'));
+
+function returnNeighboringNumbers(num) {
+  //* Создайте функцию, которая принимает в себя 1 аргумент в виде целого числа и возвращает массив из трех чисел: одно на 1 меньше, сам аргумент, и число на 1 больше.
+  return [num - 1, num, num + 1];
+}
+
+console.log(returnNeighboringNumbers(10));
+
+function getMathResult(num, count) {
+  if (typeof count == 'string' || count <= 0) {
+    return num;
+  }
+
+  let result = `${num}`;
+
+  for (let i = 1; i < count; i++) {
+    result += `---${num + num * i}`;
+  }
+  return result;
+}
+
+console.log(getMathResult(20, 0));
